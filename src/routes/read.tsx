@@ -46,15 +46,15 @@ function ReadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 p-8">
+    <div className="min-h-screen bg-gray-900 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
         <div className="bg-gray-800 rounded-lg shadow-sm border border-gray-700">
-          <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-800 border-b border-gray-700 gap-4">
             <h2 className="text-lg font-semibold text-white">Read Markdown File</h2>
-            <div className="flex space-x-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <button
                 onClick={handleUploadClick}
-                className="px-4 py-2 text-sm font-medium bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors duration-200 flex items-center"
+                className="px-4 py-2 text-sm font-medium bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center"
               >
                 <Upload className="h-4 w-4 mr-2" />
                 Upload .md File
@@ -62,7 +62,7 @@ function ReadPage() {
               {markdown && (
                 <button
                   onClick={handleDownload}
-                  className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 flex items-center"
+                  className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
                 >
                   <Download className="h-4 w-4 mr-2" />
                   Download

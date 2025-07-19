@@ -63,8 +63,8 @@ function hello() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-900">
-      <div className="flex-1 flex flex-col border-r border-gray-700">
+    <div className="flex flex-col lg:flex-row h-screen overflow-hidden bg-gray-900">
+      <div className="flex-1 flex flex-col border-b lg:border-b-0 lg:border-r border-gray-700">
         <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
           <h2 className="text-lg font-semibold text-white">Editor</h2>
           <button

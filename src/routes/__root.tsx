@@ -69,23 +69,23 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <div className="p-2 flex gap-2 text-lg bg-gray-800 text-white">
+        <div className="p-2 flex flex-col sm:flex-row gap-2 text-lg bg-gray-800 text-white">
           <Link
             to="/"
             activeProps={{
               className: 'font-bold text-blue-400',
             }}
             activeOptions={{ exact: true }}
-            className="hover:text-blue-300 transition-colors"
+            className="hover:text-blue-300 transition-colors px-2 py-1 rounded"
           >
             Editor
-          </Link>{' '}
+          </Link>
           <Link
             to="/read"
             activeProps={{
               className: 'font-bold text-blue-400',
             }}
-            className="hover:text-blue-300 transition-colors"
+            className="hover:text-blue-300 transition-colors px-2 py-1 rounded"
           >
             Read Files
           </Link>
