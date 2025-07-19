@@ -9,6 +9,8 @@ export const seo = ({
   image?: string
   keywords?: string
 }) => {
+  const googleSiteVerification = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION
+
   const tags = [
     { title },
     { name: 'description', content: description },
@@ -20,6 +22,9 @@ export const seo = ({
     { name: 'og:type', content: 'website' },
     { name: 'og:title', content: title },
     { name: 'og:description', content: description },
+    ...(googleSiteVerification
+      ? [{ name: 'google-site-verification', content: googleSiteVerification }]
+      : []),
     ...(image
       ? [
           { name: 'twitter:image', content: image },
